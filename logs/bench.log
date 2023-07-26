@@ -1,0 +1,59 @@
+2023-07-26 15:01:49,384 DEBUG cd frappe-bench14 && python3 -m venv env
+2023-07-26 15:01:52,690 DEBUG cd frappe-bench14 && /home/tharun/frappe-bench14/env/bin/python -m pip install --quiet --upgrade pip
+2023-07-26 15:01:54,880 DEBUG cd frappe-bench14 && /home/tharun/frappe-bench14/env/bin/python -m pip install --quiet wheel
+2023-07-26 15:01:57,261 LOG Getting frappe
+2023-07-26 15:01:57,261 DEBUG cd frappe-bench14/apps && git clone https://github.com/frappe/frappe.git --branch version-14 --depth 1 --origin upstream
+2023-07-26 15:02:00,962 LOG Installing frappe
+2023-07-26 15:02:00,962 DEBUG cd /home/tharun/frappe-bench14 && /home/tharun/frappe-bench14/env/bin/python -m pip install --quiet --upgrade -e /home/tharun/frappe-bench14/apps/frappe 
+2023-07-26 15:02:40,348 DEBUG cd /home/tharun/frappe-bench14/apps/frappe && yarn install
+2023-07-26 15:02:57,284 DEBUG cd /home/tharun/frappe-bench14 && supervisorctl restart frappe:
+2023-07-26 15:02:57,474 WARNING cd /home/tharun/frappe-bench14 && supervisorctl restart frappe: executed with exit code 7
+2023-07-26 15:02:57,474 WARNING restarting supervisor failed. Use `bench restart` to retry.
+2023-07-26 15:02:57,475 DEBUG cd frappe-bench14 && bench build
+2023-07-26 15:02:57,591 INFO /usr/local/bin/bench build
+2023-07-26 15:03:15,604 LOG setting up backups
+2023-07-26 15:03:15,621 LOG backups were set up
+2023-07-26 15:03:15,622 INFO Bench frappe-bench14 initialized
+2023-07-26 15:03:15,848 INFO A newer version of bench is available: 5.16.2 → 5.16.4
+2023-07-26 15:04:22,935 INFO /usr/local/bin/bench find .
+2023-07-26 15:04:23,136 INFO A newer version of bench is available: 5.16.2 → 5.16.4
+2023-07-26 15:04:27,273 INFO /usr/local/bin/bench start
+2023-07-26 15:04:27,612 INFO /usr/local/bin/bench watch
+2023-07-26 15:04:27,614 INFO /usr/local/bin/bench serve --port 8006
+2023-07-26 15:04:27,635 INFO /usr/local/bin/bench schedule
+2023-07-26 15:04:27,640 INFO /usr/local/bin/bench worker
+2023-07-26 15:06:07,297 INFO /usr/local/bin/bench get-app erpnext --branch version-14
+2023-07-26 15:06:08,008 LOG Getting erpnext
+2023-07-26 15:06:08,009 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-14 --depth 1 --origin upstream
+2023-07-26 15:06:16,402 LOG Installing erpnext
+2023-07-26 15:06:16,530 DEBUG cd /home/tharun/frappe-bench14 && /home/tharun/frappe-bench14/env/bin/python -m pip install --quiet --upgrade -e /home/tharun/frappe-bench14/apps/erpnext 
+2023-07-26 15:06:24,606 DEBUG cd /home/tharun/frappe-bench14/apps/erpnext && yarn install
+2023-07-26 15:06:25,657 DEBUG bench build --app erpnext
+2023-07-26 15:06:25,784 INFO /usr/local/bin/bench build --app erpnext
+2023-07-26 15:06:32,408 DEBUG cd /home/tharun/frappe-bench14 && supervisorctl restart frappe:
+2023-07-26 15:06:32,615 WARNING cd /home/tharun/frappe-bench14 && supervisorctl restart frappe: executed with exit code 7
+2023-07-26 15:06:32,615 WARNING restarting supervisor failed. Use `bench restart` to retry.
+2023-07-26 15:06:32,757 INFO A newer version of bench is available: 5.16.2 → 5.16.4
+2023-07-26 15:06:45,512 INFO /usr/local/bin/bench find .
+2023-07-26 15:06:45,750 INFO A newer version of bench is available: 5.16.2 → 5.16.4
+2023-07-26 15:06:51,917 INFO /usr/local/bin/bench start
+2023-07-26 15:06:52,259 INFO /usr/local/bin/bench serve --port 8006
+2023-07-26 15:06:52,261 INFO /usr/local/bin/bench worker
+2023-07-26 15:06:52,277 INFO /usr/local/bin/bench schedule
+2023-07-26 15:06:52,278 INFO /usr/local/bin/bench watch
+2023-07-26 15:07:39,124 INFO /usr/local/bin/bench new-site testsite.com install-app erpnext
+2023-07-26 15:08:00,895 INFO /usr/local/bin/bench new-site testsite.com
+2023-07-26 15:10:44,391 INFO /usr/local/bin/bench start
+2023-07-26 15:10:44,796 INFO /usr/local/bin/bench serve --port 8006
+2023-07-26 15:10:44,814 INFO /usr/local/bin/bench schedule
+2023-07-26 15:10:44,816 INFO /usr/local/bin/bench watch
+2023-07-26 15:10:44,827 INFO /usr/local/bin/bench worker
+2023-07-26 15:11:13,251 INFO /usr/local/bin/bench --site testsite.com install-app erpnext
+2023-07-26 15:21:49,860 INFO /usr/local/bin/bench set-config developer_mode 1
+2023-07-26 15:22:43,175 INFO /usr/local/bin/bench start
+2023-07-26 15:22:43,541 INFO /usr/local/bin/bench worker
+2023-07-26 15:22:43,553 INFO /usr/local/bin/bench schedule
+2023-07-26 15:22:43,561 INFO /usr/local/bin/bench watch
+2023-07-26 15:22:43,567 INFO /usr/local/bin/bench serve --port 8006
+2023-07-26 15:23:55,366 INFO /usr/local/bin/bench set-config -g developer_mode 1
+2023-07-26 15:24:24,570 INFO /usr/local/bin/bench --site testsite.com clear-cache
